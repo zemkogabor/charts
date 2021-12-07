@@ -263,4 +263,6 @@ spec:
       storageClassName: {{ .Values.persistentVolume.storageClass }}
       {{- end }}
       {{- end }}
+      selector:
+        {{- toYaml .Values.persistentVolume.selector | nindent 8 }}
   {{- end }}
